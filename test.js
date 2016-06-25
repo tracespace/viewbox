@@ -3,7 +3,7 @@
 
 var expect = require('chai').expect
 
-var viewbox = require('.')
+var viewbox = require('./')
 
 describe('viewbox', function() {
   it('should be able to create a new viewbox', function() {
