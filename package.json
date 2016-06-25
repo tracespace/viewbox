@@ -1,6 +1,6 @@
 {
   "name": "viewbox",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Library for dealing with SVG viewboxes as plain arrays",
   "main": "index.js",
   "directories": {

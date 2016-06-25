@@ -4,7 +4,7 @@
  
 <a name="viewbox"></a>
 # viewbox
-should be able to create a new empty viewbox.
+should be able to create a new viewbox.
 
 ```js
 var result = viewbox.create()
@@ -70,5 +70,40 @@ expect(result).to.eql({
   width: 0,
   height: 0
 })
+```
+
+should output a 0 size rectangle for something falsey.
+
+```js
+var result = viewbox.rect()
+expect(result).to.eql({
+  x: 0,
+  y: 0,
+  width: 0,
+  height: 0
+})
+```
+
+should be able to generate a viewbox string.
+
+```js
+var box = [1, 2, 3, 4]
+var result = viewbox.asString(box)
+expect(result).to.equal('1 2 3 4')
+```
+
+should output a new viewbox as a 0 size viewbox string.
+
+```js
+var box = viewbox.create()
+var result = viewbox.asString(box)
+expect(result).to.equal('0 0 0 0')
+```
+
+should output something falsey as a 0 size viewbox string.
+
+```js
+var result = viewbox.asString()
+expect(result).to.equal('0 0 0 0')
 ```
 
